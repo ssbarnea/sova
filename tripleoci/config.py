@@ -143,6 +143,25 @@ COLUMNED_TRACKED_JOBS = {
         "legacy-tripleo-ci-centos-7-undercloud-oooq",
         "legacy-tripleo-ci-centos-7-undercloud-containers",
     ],
+    "RDO cloud OVB": [
+        "gate-tripleo-ci-centos-7-ovb-3ctlr_1comp-featureset001-master-nv",
+        "gate-tripleo-ci-centos-7-ovb-1ctlr_1comp_1ceph-featureset024-master-nv",
+        "gate-tripleo-ci-centos-7-ovb-1ctlr_1comp-featureset022-master-nv"
+    ],
+    "RDO cloud upgrades": [
+        "gate-tripleo-ci-centos-7-containers-multinode-upgrades-master",
+        "gate-tripleo-ci-centos-7-containers-multinode-upgrades-pike",
+        "gate-tripleo-ci-centos-7-multinode-upgrades-master",
+        "gate-tripleo-ci-centos-7-multinode-upgrades-pike",
+        "gate-tripleo-ci-centos-7-multinode-upgrades-ocata",
+        "gate-tripleo-ci-centos-7-undercloud-upgrades-master",
+        "gate-tripleo-ci-centos-7-undercloud-upgrades-pike",
+        "gate-tripleo-ci-centos-7-undercloud-upgrades-ocata",
+        "gate-tripleo-ci-centos-7-multinode-1ctlr-featureset012-upgrades-master",
+        "gate-tripleo-ci-centos-7-multinode-1ctlr-featureset012-upgrades-pike",
+        "gate-tripleo-ci-centos-7-multinode-1ctlr-featureset014-upgrades-master",
+        "gate-tripleo-ci-centos-7-multinode-1ctlr-featureset014-upgrades-pike",
+    ]
 
 }
 TRIPLEOCI = {
@@ -159,6 +178,6 @@ PLUGIN_JOBS = TRACKED_JOBS
 
 
 class PLUGIN_TRIPLEOCI_CONFIG(object):
-    console_name = 'job-output.txt'
+    console_name = ['job-output.txt.gz', 'console.txt.gz']
 
 ACTIVE_PLUGIN_CONFIG = PLUGIN_TRIPLEOCI_CONFIG
